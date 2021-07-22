@@ -2,7 +2,7 @@
   <%# <%= image_tag prototype.image, class: 'prototype-image' if prototype.image.attached? %> 
   <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype.id) if prototype.image.attached? %>
   <div class="card__body">
-    <%= prototype.title %>
+    <%= link_to prototype.title, prototype_path(prototype.id) %>
     <p class="card__summary">
       <%= prototype.catch_copy %>
     </p>
